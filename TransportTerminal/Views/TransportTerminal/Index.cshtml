@@ -1,0 +1,65 @@
+﻿@{
+    var bigVehicles = ViewBag.BigVehicles;
+    var smallVehicles = ViewBag.SmallVehicles;
+
+}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<div class="container">
+    <div class="main-body">
+
+        <div class="row gutters-sm">
+            <div class="col-sm-6 mb-3">
+                <h6 class="d-flex align-items-center mb-3">Small vehicles</h6>
+                <div class="card" id="smallVehicles">
+                   
+                </div>
+                <button class="btn btn-primary" type="button" id="btnSmallVehicle">Add Vehicle</button>
+            </div>
+            <div class="col-sm-6 mb-3">
+                <h6 class="d-flex align-items-center mb-3">Big vehicles</h6>
+                <div class="card mb-3" id="bigVehicles">
+                   
+
+                </div>
+                <button class="btn btn-primary" type="button" id="btnBigVehicle">Add Vehicle</button>
+            </div>
+            <hr>
+            <div class="row gutters-sm">
+                <div class="col-sm-6 mb-3">
+                    <div class="card h-100">
+                        <h6 class="d-flex align-items-center mb-3">Total ticket income</h6>
+                        <div class="card-body" id="totalIncome">
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <div class="card h-100">
+                        <h6 class="d-flex align-items-center mb-3">Employee income</h6>
+                        <div class="card-body" id="employeeIncome">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="button" id="btnFinish">Finish</button>
+        <button class="btn btn-primary" type="button" id="btnDeleteAll">Delete all</button>
+    </div>
+</div>
+
+<script src="~/js/VehicleDisplay.js"></script>
+<script src="~/js/IncomeDisplay.js"></script>
+<script>
+
+    displayEmployeeIncome();
+    displayBigVehicles();
+    displaySmallVehicles();
+    displayTotalIncome();
+    deleteAll();
+</script>

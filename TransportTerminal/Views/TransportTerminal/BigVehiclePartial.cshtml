@@ -1,0 +1,26 @@
+﻿@model List<BigVehicle>
+
+@{
+}
+
+
+
+<div class="card-body">
+    @foreach (var item in Model)
+    {
+        Type type = item.GetType();
+        <h4>@type.Name</h4>
+        <div>
+            <div>Gas</div>
+            <div class="progress mb-3" style="border-radius:20px">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: @item.Gas%" aria-valuenow="@item.Gas" aria-valuemin="0" aria-valuemax="100">@item.Gas%</div>
+            </div>
+            <div>Battery</div>
+            <div class="progress mb-3" style="border-radius:20px">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: @item.Battery%" aria-valuenow="@item.Battery" aria-valuemin="0" aria-valuemax="100">@item.Battery%</div>
+            </div>
+        </div>
+        <hr />
+    }
+</div>
+
